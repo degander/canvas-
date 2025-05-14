@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #111827;
+  background-color: white;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Custom slider styles */
+input[type="range"] {
+  -webkit-appearance: none;
+  @apply w-full h-1 bg-gray-200 rounded-full cursor-pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  @apply w-4 h-4 bg-white border-2 border-purple-500 rounded-full cursor-pointer transition-all duration-150;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  @apply scale-110 border-purple-600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.canvas-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 0.3s ease;
+}
+
+.canvas-container:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.control-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg 
+  transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 
+  focus:ring-indigo-500 focus:ring-opacity-50;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-lg 
+  transition-all duration-300 ease-in-out hover:shadow-md focus:outline-none focus:ring-2 
+  focus:ring-gray-400 focus:ring-opacity-50;
+}
+
+.btn-danger {
+  @apply bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg 
+  transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 
+  focus:ring-red-500 focus:ring-opacity-50;
+}
+
+.slider-container {
+  @apply w-full;
+}
+
+.slider {
+  @apply w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 bg-indigo-600 rounded-full cursor-pointer 
+  transition-all duration-300 hover:bg-indigo-700 hover:scale-110;
+}
+
+.direction-btn {
+  @apply p-3 rounded-full bg-indigo-100 text-indigo-600 hover:bg-indigo-200 
+  transition-all duration-300 transform hover:scale-110 focus:outline-none 
+  focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50;
+} 
