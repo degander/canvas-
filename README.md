@@ -3,7 +3,8 @@
 A web-based image stencil editor built using **React.js**, **Fabric.js**, and **Redux**, inspired by Canva. This editor allows users to
 upload an image and mask it inside a custom stencil shape (like a hexagon), then adjust and transform the image interactively within the masked frame.
 
-![image](https://github.com/user-attachments/assets/e4d5f35f-992a-4bf6-b143-3d4c644d8231)
+![image](https://github.com/user-attachments/assets/79931504-4119-4a34-b063-b1d053419f96)
+
 
 
 ---
